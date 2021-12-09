@@ -8,13 +8,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/styles/main.css')}}" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <title>Laracamp by BuildWith Angga</title>
+    <title>Laracamp</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/assets/images/logo.png" alt="">
+                <img src="{{asset ('assets/images/logo.png')}}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-lg-6 col-12 text-center">
                             <a href="#">
-                                <img src="/assets/images/banner.png" class="img-fluid" alt="">
+                                <img src="{{asset ('assets/images/banner.png')}}" class="img-fluid" alt="">
                             </a>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
             </div>
             <div class="row brands">
                 <div class="col-lg-12 col-12 text-center">
-                    <img src="/assets/images/brands.png" alt="">
+                    <img src="{{('assets/images/brands.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-lg-3 col-12">
                     <div class="item-benefit">
-                        <img src="/assets/images/ic_globe.png" class="icon" alt="">
+                        <img src="{{ asset('assets/images/ic_globe.png')}}" class="icon" alt="">
                         <h3 class="title">
                             Diversity
                         </h3>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-lg-3 col-12">
                     <div class="item-benefit">
-                        <img src="/assets/images/ic_globe-1.png" class="icon" alt="">
+                        <img src="{{asset('assets/images/ic_globe-1.png')}}" class="icon" alt="">
                         <h3 class="title">
                             A.I Guideline
                         </h3>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="col-lg-3 col-12">
                     <div class="item-benefit">
-                        <img src="/assets/images/ic_globe-2.png" class="icon" alt="">
+                        <img src="{{asset('assets/images/ic_globe-2.png')}}" class="icon" alt="">
                         <h3 class="title">
                             1-1 Mentoring
                         </h3>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="col-lg-3 col-12">
                     <div class="item-benefit">
-                        <img src="/assets/images/ic_globe-3.png" class="icon" alt="">
+                        <img src="{{asset ('assets/images/ic_globe-3.png')}}" class="icon" alt="">
                         <h3 class="title">
                             Future Job
                         </h3>
@@ -157,7 +157,7 @@
         <div class="container">
             <div class="row item-step pb-70">
                 <div class="col-lg-6 col-12 text-center">
-                    <img src="/assets/images/step1.png" class="cover" alt="">
+                    <img src="{{asset('assets/images/step1.png')}}" class="cover" alt="">
                 </div>
                 <div class="col-lg-6 col-12 text-left copywriting">
                     <p class="story">
@@ -194,13 +194,13 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-12 text-center">
-                    <img src="/assets/images/step2.png" class="cover" alt="">
+                    <img src="{{asset ('assets/images/step2.png')}}" class="cover" alt="">
                 </div>
 
             </div>
             <div class="row item-step">
                 <div class="col-lg-6 col-12 text-center">
-                    <img src="/assets/images/step3.png" class="cover" alt="">
+                    <img src="{{asset ('assets/images/step3.png')}}" class="cover" alt="">
                 </div>
                 <div class="col-lg-6 col-12 text-left copywriting">
                     <p class="story">
@@ -252,7 +252,7 @@
                                     $280K
                                 </h1>
                                 <div class="item-benefit-pricing mb-4">
-                                    <img src="/assets/images/ic_check.svg" alt="">
+                                    <img src="{{asset('assets/images/ic_check.svg')}}" alt="">
                                     <p>
                                         Pro Techstack Kit
                                     </p>
@@ -260,7 +260,7 @@
                                     <div class="divider"></div>
                                 </div>
                                 <div class="item-benefit-pricing mb-4">
-                                    <img src="/assets/images/ic_check.svg" alt="">
+                                    <img src="{{asset('assets/images/ic_check.svg')}}" alt="">
                                     <p>
                                         iMac Pro 2021 & Display
                                     </p>
@@ -268,7 +268,7 @@
                                     <div class="divider"></div>
                                 </div>
                                 <div class="item-benefit-pricing mb-4">
-                                    <img src="/assets/images/ic_check.svg" alt="">
+                                    <img src="{{asset('assets/images/ic_check.')}}svg" alt="">
                                     <p>
                                         1-1 Mentoring Program
                                     </p>
@@ -276,7 +276,7 @@
                                     <div class="divider"></div>
                                 </div>
                                 <div class="item-benefit-pricing mb-4">
-                                    <img src="/assets/images/ic_check.svg" alt="">
+                                    <img src="{{asset('assets/images/ic_check.svg')}}" alt="">
                                     <p>
                                         Final Project Certificate
                                     </p>
@@ -284,7 +284,7 @@
                                     <div class="divider"></div>
                                 </div>
                                 <div class="item-benefit-pricing mb-4">
-                                    <img src="/assets/images/ic_check.svg" alt="">
+                                    <img src="{{asset('assets/images/ic_check.svg')}}" alt="">
                                     <p>
                                         Offline Course Videos
                                     </p>
