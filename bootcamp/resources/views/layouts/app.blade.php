@@ -21,7 +21,7 @@
 
   @include('components.navbar')
 
-  @yield(@component.app)
+  @yield('content')
 
     <!-- Optional JavaScript; choose one of the two! -->
 

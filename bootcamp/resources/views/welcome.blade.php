@@ -1,4 +1,7 @@
-<!doctype html>
+@extends('layouts.app')
+
+@section('content')
+    <!doctype html>
 <html lang="en">
 
 <head>
@@ -18,8 +21,6 @@
 </head>
 
 <body>
-
-  @include('components.navbar')
 
     <section class="banner">
         <div class="container">
@@ -438,3 +439,4 @@
 </body>
 
 </html>
+@endsection
