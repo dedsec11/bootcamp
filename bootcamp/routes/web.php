@@ -28,6 +28,8 @@ Route::get('success_checkout', function () {
 
 //socialte google
 Route::get('sign-in-google',[UserController::class, 'google'])->name('user.login.google');
+Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
