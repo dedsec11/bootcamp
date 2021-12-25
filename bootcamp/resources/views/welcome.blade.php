@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('assets/styles/main.css')}}" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +36,8 @@
                                 Start Your <span class="text-purple">Developer <br> Journey</span> Today
                             </h1>
                             <p class="support">
-                                Our bootcamp is helping junior developers who <br> are really passionate in the programming.
+                                Our bootcamp is helping junior developers who <br> are really passionate in the
+                                programming.
                             </p>
                             <p class="cta">
                                 <a href="#" class="btn btn-master btn-primary">
@@ -153,7 +155,8 @@
                         Finish The Project
                     </h2>
                     <p class="support">
-                        Each of you will be joining the private group and also <br> working together with team members on project
+                        Each of you will be joining the private group and also <br> working together with team members
+                        on project
                     </p>
                     <p class="mt-5">
                         <a href="#" class="btn btn-master btn-secondary me-3">
@@ -178,7 +181,8 @@
                         Big Demo Day
                     </h2>
                     <p class="support">
-                        Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
+                        Learn how to speaking in public to demonstrate your <br> final project and receive the important
+                        feedbacks
                     </p>
                     <p class="mt-5">
                         <a href="#" class="btn btn-master btn-secondary me-3">
@@ -201,7 +205,8 @@
                         Start Your Journey
                     </h2>
                     <p class="support">
-                        Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
+                        Learn how to speaking in public to demonstrate your <br> final project and receive the important
+                        feedbacks
                     </p>
                     <p class="mt-5">
                         <a href="#" class="btn btn-master btn-thirdty me-3">
@@ -283,7 +288,8 @@
                                     <div class="clear"></div>
                                 </div>
                                 <p>
-                                    <a href="{{route('checkout')}}" class="btn btn-master btn-primary w-100 mt-3">
+                                    <a href="{{route('checkout', 'gila-belajar')}}"
+                                        class="btn btn-master btn-primary w-100 mt-3">
                                         Take This Plan
                                     </a>
                                 </p>
@@ -329,7 +335,8 @@
                                     <div class="clear"></div>
                                 </div>
                                 <p>
-                                    <a href="{{route('checkout')}}" class="btn btn-master btn-secondary w-100 mt-3">
+                                    <a href="{{route('checkout', 'baru-mulai')}}"
+                                        class="btn btn-master btn-secondary w-100 mt-3">
                                         Start With This Plan
                                     </a>
                                 </p>
@@ -365,7 +372,8 @@
                             <div class="item-review">
                                 <img src="{{asset('assets/images/stars.svg')}}" alt="">
                                 <p class="message">
-                                    I was not really into code but after they teach me how to train my logic then I was really fall in love with code
+                                    I was not really into code but after they teach me how to train my logic then I was
+                                    really fall in love with code
                                 </p>
                                 <div class="user">
                                     <img src="{{asset('assets/images/fanny_photo.png')}}" class="photo" alt="">
@@ -403,7 +411,8 @@
                             <div class="item-review">
                                 <img src="{{asset('assets/images/stars.svg')}}" alt="">
                                 <p class="message">
-                                    My background is design and art but I do really love how to make my design working in the development phase
+                                    My background is design and art but I do really love how to make my design working
+                                    in the development phase
                                 </p>
                                 <div class="user">
                                     <img src="{{asset('assets/images/beatrice.png')}}" class="photo" alt="">
@@ -434,7 +443,9 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
 
 </body>
 
