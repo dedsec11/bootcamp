@@ -28,13 +28,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-1 col-12"></div>
+                    <!-- <div class="col-lg-1 col-12"></div> -->
                     <div class="col-lg-6 col-12">
                         <form action="{{ route('checkout.store', $camp->id) }}" class="basic-form" method="POST">
                             @csrf
                             <div class="mb-4">
                                 <label class="form-label">Full Name</label>
-                                <input name="email" type="text" class="form-control" />
+                                <input name="name" type="text" class="form-control" />
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Email Address</label>

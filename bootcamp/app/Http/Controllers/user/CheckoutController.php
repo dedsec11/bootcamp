@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\user;
 
+// use Illuminate\Support\Facades\Auth;
+use Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Checkout;
 use Illuminate\Http\Request;
 use App\Models\Camp;
-use Illuminate\Support\Facades\Auth;
+
 
 class CheckoutController extends Controller
 {
@@ -44,10 +46,22 @@ class CheckoutController extends Controller
     {
         //mapping request data
         $data = $request->all();
-        $data = ['user_id'] = Auth::id();
-        $data = ['camp_id'] = $camp->id();
+        $data['user_id'] = Auth::id();
+        $data['camp_id'] = $camp->id;
 
-        return $data;
+        //update data
+        $user = Auth::user();
+        $user->email = $data['email'];
+        $user->name = $data['name'];
+        $user->occupation = $data['occupation'];
+        $user->save();
+
+        //create table checkout
+        $checkout = Checkout::create($data);
+
+        return redirect(route('checkout.success'));
+
+        return $checkout;
     }
 
     /**
