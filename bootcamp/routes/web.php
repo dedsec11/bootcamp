@@ -27,7 +27,7 @@ Route::get('auth/google/callback', [UserController::class, 'handleProviderCallba
 
 
 
-RouteRoute::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 //checkout routes
 Route::get('checkout/success',[CheckoutController::class,'success'])->name('checkout.success');
 Route::get('checkout/{camp:slug}',[CheckoutController::class,'create'])->name('checkout.create');
