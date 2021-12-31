@@ -31,7 +31,7 @@
                       <img src="{{ Auth::user()->avatar }}" class="user-photo " style="border-radius: 100%;" alt="">
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style=" left:auto">
                           <li>
-                              <a href="" class="dropdown-item">
+                              <a href="{{ route('dashboard') }}" class="dropdown-item">
                                   My Dashboard
                               </a>
                           </li>
