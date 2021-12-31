@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\user\CheckoutController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,9 @@ Route::post('checkout/{camp}',[CheckoutController::class,'store'])->name('checko
 Route::get('sign-in-google',[UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
 
+
+//dashboard
+Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
