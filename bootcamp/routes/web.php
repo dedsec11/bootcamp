@@ -33,8 +33,8 @@ Route::get('auth/google/callback', [UserController::class, 'handleProviderCallba
 //dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
