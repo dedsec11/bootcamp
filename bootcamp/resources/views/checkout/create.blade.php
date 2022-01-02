@@ -34,21 +34,37 @@
                             @csrf
                             <div class="mb-4">
                                 <label class="form-label">Full Name</label>
-                                <input name="name" type="text" class="form-control" value="{{ Auth::user()->name }}" />
+                                <input name="name" type="text"
+                                    class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}"
+                                    value="{{ Auth::user()->name }}" />
+                                @if ($errors->has('name'))
+                                <p class="text-danger">{{$errors->first('name')}}</p>
+                                @endif
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Email Address</label>
-                                <input name="email" type="email" class="form-control"
+                                <input name="email" type="email"
+                                    class="form-control {{$errors->first('name') ? 'is-invalid' : ''}}"
                                     value="{{ Auth::user()->email }}" />
+                                @if ($errors->has('email'))
+                                <p class="text-danger">{{$errors->first('email')}}</p>
+                                @endif
                             </div>
                             <div class=" mb-4">
                                 <label class="form-label">Occupation</label>
                                 <input name="occupation" type="text" class="form-control"
-                                    value="{{ Auth::user()->occupation }}" />
+                                    value="{{old('occupation') ? : Auth::user()->occupation }}" />
+                                @if ($errors->has('occupation'))
+                                <p class="text-danger">{{$errors->first('occupation')}}</p>
+                                @endif
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Card Number</label>
-                                <input name="card_number" type="number" class="form-control" />
+                                <input name="card_number" type="number" class="form-control"
+                                    value="{{old('card_number') ? : Auth::user()->card_number }}" />
+                                @if ($errors->has('card_number'))
+                                <p class="text-danger">{{$errors->first('card_number')}}</p>
+                                @endif
                             </div>
                             <div class="mb-5">
                                 <div class="row">
@@ -75,7 +91,8 @@
     </div>
 
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integri
+    ty="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
 </script>
+
 @endsection
