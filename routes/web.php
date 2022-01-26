@@ -33,9 +33,9 @@ Route::get('checkout/success',[CheckoutController::class,'success'])->name('chec
 Route::get('checkout/{camp:slug}',[CheckoutController::class,'create'])->name('checkout.create');
 Route::post('checkout/{camp}',[CheckoutController::class,'store'])->name('checkout.store');
 
-//dashboard
+//user dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-
+Route::get('dashboard/checkout/invoice/{checkout}',[checkoutController::class,'invoice'])->name('user.checkout.invoice');
 });
 
 // Route::get('/dashboard', function () {
