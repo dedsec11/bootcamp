@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\user\CheckoutController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\User\DashboardController as UserDashboard;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +36,18 @@ Route::get('checkout/success',[CheckoutController::class,'success'])->name('chec
 Route::get('checkout/{camp:slug}',[CheckoutController::class,'create'])->name('checkout.create');
 Route::post('checkout/{camp}',[CheckoutController::class,'store'])->name('checkout.store');
 
-//user dashboard
+//dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+
+//User dashboard
+Route::prefix('user/dashboard')->namespace('User')->name('user.')->group(function () {
+    Route::get('/', [UserController::class,'index'])->name('dashboard');
+});
+
+//Admin dashboard
+Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminController::class,'index'])->name('dashboard');
+});
 });
 
 // Route::get('/dashboard', function () {
