@@ -41,12 +41,12 @@ Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard')
 
 //User dashboard
 Route::prefix('user/dashboard')->namespace('User')->name('user.')->group(function () {
-    Route::get('/', [UserController::class,'index'])->name('dashboard');
+    Route::get('/', [UserDashboard::class,'index'])->name('dashboard');
 });
 
 //Admin dashboard
 Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->group(function () {
-    Route::get('/', [AdminController::class,'index'])->name('dashboard');
+    Route::get('/', [AdminDashboard::class,'index'])->name('dashboard');
 });
 });
 
