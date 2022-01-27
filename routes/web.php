@@ -35,7 +35,6 @@ Route::post('checkout/{camp}',[CheckoutController::class,'store'])->name('checko
 
 //user dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-Route::get('dashboard/checkout/invoice/{checkout}',[checkoutController::class,'invoice'])->name('user.checkout.invoice');
 });
 
 // Route::get('/dashboard', function () {
