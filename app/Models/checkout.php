@@ -9,14 +9,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class checkout extends Model
 {
-    use HasFactory,softDeletes;
+    use HasFactory, softDeletes;
 
-    protected $fillable = ['user_id','camp_id','card_number','expired','cvc','is_paid'];
+    protected $fillable = ['user_id', 'camp_id', 'payment_status', 'midtrans_url', 'midtrans_booking_code'];
 
-    public function setExpiredAttribute($value)
-    {
-        $this->attributes ['Expired'] = date('Y-m-t', strtotime($value));
-    }
+
 
     /**
      * Get the user that owns the checkout
