@@ -17,9 +17,6 @@ class CreateCheckoutsTable extends Migration
             $table->id();
             $table->foreignID('user_id')->constrained();
             $table->foreignID('camp_id')->constrained();
-            $table->string('card_number', 20);
-            $table->date('expired');
-            $table->string('cvc',3);
             $table->boolean('is_paid')->default(false);
             $table->timestamps();
             $table->softDeletes();

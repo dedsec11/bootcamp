@@ -16,11 +16,12 @@ use Midtrans;
 
 class CheckoutController extends Controller
 {
-    function __construct(){
+    function __construct()
+    {
         Midtrans\Config::$serverKey = env('MIDTRANS_SERVERKEY');
         Midtrans\Config::$isProduction = env('MIDTRANS_IS_PRODUCTION');
         Midtrans\Config::$isSanitized = env('MIDTRANS_IS_SANITIZED');
-        Midtrans\Config::$isds = env('MIDTRANS_IS_3DS');
+        Midtrans\Config::$is3ds = env('MIDTRANS_IS_3DS');
     }
 
 
@@ -70,6 +71,8 @@ class CheckoutController extends Controller
         $user->email = $data['email'];
         $user->name = $data['name'];
         $user->occupation = $data['occupation'];
+        $user->occupation = $data['phone'];
+        $user->occupation = $data['address'];
         $user->save();
 
         //create table checkout
@@ -147,7 +150,7 @@ class CheckoutController extends Controller
             'gross_amount' => $price
         ];
 
-        $item_details = [
+        $item_details[] = [
             'id' => $orderId,
             'price' => $price,
             'quantity' => 1,
@@ -164,7 +167,7 @@ class CheckoutController extends Controller
             'country_code' => "IDN"
         ];
 
-        $customer_details [
+        $customer_details = [
             'first_name' => $checkout->User->name,
             'last_name' => "",
             'email' => $checkout->User->email,
@@ -173,22 +176,21 @@ class CheckoutController extends Controller
         ];
 
         $midtrans_params = [
-            'transactiond_details' => $transaction_details,
+            'transactions_details' => $transaction_details,
             'customer_details' => $customer_details,
             'item_details' => $item_details
         ];
 
         try {
             //Get Snap Payment Page URL
-            $paymentUrl = \Midtrans\Snap::createTransaction($params)->redirect_url;
+            $paymentUrl = \Midtrans\Snap::createTransaction($midtrans_params)->redirect_url;
             $checkout->$midtrans_url = $paymentUrl;
             $checkout->save();
 
             return $paymentUrl;
         } catch (Exception $e) {
-            return false;
+            return dd($e);
         }
-
     }
     public function midtransCallback(Request $request)
     {
