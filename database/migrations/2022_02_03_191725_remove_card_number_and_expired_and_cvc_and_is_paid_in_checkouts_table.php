@@ -14,10 +14,10 @@ class RemoveCardNumberAndExpiredAndCvcAndIsPaidInCheckoutsTable extends Migratio
     public function up()
     {
         Schema::table('checkouts', function (Blueprint $table) {
-            $table->dropColumn('card_number');
-            $table->dropColumn('expired');
-            $table->dropColumn('cvc');
-            $table->dropColumn('is_paid');
+            // $table->dropColumn('card_number');
+            // $table->dropColumn('expired');
+            // $table->dropColumn('cvc');
+            // $table->dropColumn('is_paid');
         });
     }
 
