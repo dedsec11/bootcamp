@@ -34,10 +34,11 @@
                             <strong>${{$checkout->Camp->price}}K</strong>
                         </td>
                         <td>
-                            @if($checkout->is_paid)
-                            <strong><span class="text-green" style="color:green;">Payment Success</span></strong>
-                            @else
-                            <strong><span class="text-warning">Waiting For Payment</span></strong>
+                            <strong>{{$checkout->payment_status}}</strong>
+                        </td>
+                        <td>
+                            @if ($checkout->payment_status === 'waiting')
+                            <a href="{{$checkout->midtrans_url}}" class="btn btn-primary">Pay here</a>
                             @endif
                         </td>
                         <td>
@@ -59,7 +60,8 @@
         </div>
     </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integri ty="sha
+384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
 </script>
+
 @endsection
